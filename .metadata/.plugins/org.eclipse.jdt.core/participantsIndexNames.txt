@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+/Users/bharathjain/Documents/Smart_PG_Management/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2646257287.index
+/Main/src/main/resources
+/Users/bharathjain/Documents/Smart_PG_Management/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/875920574.index
+/PG_Management/src/main/resources
