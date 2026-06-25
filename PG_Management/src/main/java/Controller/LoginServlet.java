@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ import dao.AdminDAO;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	
-protected void doPost(HttpServletRequest req,HttpServletResponse res) throws IOException {
+protected void doPost(HttpServletRequest req,HttpServletResponse res) throws ServletException ,IOException {
 	
 	String username=req.getParameter("username");
 	String password=req.getParameter("password");
@@ -21,8 +22,8 @@ protected void doPost(HttpServletRequest req,HttpServletResponse res) throws IOE
 		if(valid) {
 			res.sendRedirect("dashboard.jsp");
 		}else {
-		//	System.err.println("Invalid Username or Password");
-			res.sendRedirect("login.jsp");
+		    req.setAttribute("error", "Invalid Username or Password");
+			req.getRequestDispatcher("login.jsp").forward(req, res);;
 			
 		}
 	}

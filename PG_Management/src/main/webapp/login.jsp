@@ -18,5 +18,13 @@ password:
 <input type="submit" value="login">
 </form>
 
+<% 
+String error =(String) request.getAttribute("error");
+if(error != null){
+	%>
+	<p style="color:red;"><%= error %></p>
+<%
+}
+%>	
 </body>
 </html>
