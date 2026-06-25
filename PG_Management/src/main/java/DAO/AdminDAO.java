@@ -1,10 +1,10 @@
-package DAO;
+package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import Util.DBconnection;
+import util.DBconnection;
 
 public class AdminDAO {
 	public boolean validateAdmin(String username,String password) {

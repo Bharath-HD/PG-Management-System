@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Dashboard</title>
 </head>
 <body>
+<h1>welcone admin</h1>
+<a href="students.jsp">Manage Students</a><br>
+<a href="rooms.jsp">Manage Rooms</a>
 
 </body>
 </html>
