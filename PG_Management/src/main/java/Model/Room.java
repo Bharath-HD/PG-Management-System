@@ -2,7 +2,7 @@ package model;
 
 public class Room {
 private int roomId;
-private String roomNumber;
+private String RoomNumber;
 private int maxCapacity;
 
 public int getRoomId() {
@@ -12,15 +12,15 @@ public void setRoomId(int roomId) {
 	this.roomId = roomId;
 }
 public String getRoomNumber() {
-	return roomNumber;
+	return RoomNumber;
 }
-public void setRoomNumber(String roomNumber) {
-	this.roomNumber = roomNumber;
+public void setRoomNumber(String RoomNumber) {
+	this.RoomNumber = RoomNumber;
 }
-public int getMaxCount() {
+public int getMaxCapacity() {
 	return maxCapacity;
 }
-public void setMaxCount(int maxCount) {
-	this.maxCapacity = maxCount;
+public void setMaxCapacity(int maxCapacity) {
+	this.maxCapacity = maxCapacity;
 }
 }

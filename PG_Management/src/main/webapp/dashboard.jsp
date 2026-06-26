@@ -9,7 +9,7 @@
 <body>
 <h1>welcone admin</h1>
 <a href="students.jsp">Manage Students</a><br>
-<a href="rooms.jsp">Manage Rooms</a>
+<a href="rooms.jsp">Add Rooms</a>
 
 </body>
 </html>
