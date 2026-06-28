@@ -2,14 +2,17 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Room;
 import util.DBconnection;
 
 public class RoomDAO {
  
-	public int addRoom(Room room) {
-		
+	public int addRoom(Room room) 
+	{
        try {
 			Connection con=DBconnection.getConnection();
 			PreparedStatement pst = con.prepareStatement("Insert into room (room_number,max_capacity) VALUES(?,?)");
@@ -25,6 +28,28 @@ public class RoomDAO {
        return 0;
 		
 		
+	}
+	public List<Room> getAllRooms () 
+	{
+		List<Room> roomList = new ArrayList<>();
+		String sql="select * from room";
+		try (
+			Connection con = DBconnection.getConnection();
+			PreparedStatement pst = con.prepareStatement(sql);
+			ResultSet rs = pst.executeQuery();
+			){
+			while(rs.next()) {
+				Room room = new Room();
+				room.setRoomId(rs.getInt("room_id"));
+				room.setRoomNumber(rs.getString("room_number"));
+				room.setMaxCapacity(rs.getInt("max_capacity"));
+				roomList.add(room);
+				
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return roomList;
 	}
 }
 		

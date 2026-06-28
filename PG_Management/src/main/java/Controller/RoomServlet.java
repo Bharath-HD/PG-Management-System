@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.RoomDAO;
 import model.Room;
 
-@WebServlet("/addRoom")
+@WebServlet("/rooms")
 public class RoomServlet extends  HttpServlet{
 	
 	public void doPost(HttpServletRequest req ,HttpServletResponse res) throws ServletException,IOException{
@@ -25,8 +26,16 @@ public class RoomServlet extends  HttpServlet{
 		
 		RoomDAO dao= new RoomDAO();
 		dao.addRoom(room);
+		res.sendRedirect("addRoom");
 		
-		
+	}
+	
+	public void doGet(HttpServletRequest req ,HttpServletResponse res) throws ServletException,IOException{
+		RoomDAO roomDAO = new RoomDAO();
+		List<Room> roomList = roomDAO.getAllRooms();
+		req.setAttribute("roomList",roomList);
+		req.getRequestDispatcher("rooms.jsp").forward(req,res);
+		System.out.println("Rooms found = " + roomList.size());
 	}
 
 	
