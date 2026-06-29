@@ -26,7 +26,7 @@ public class RoomServlet extends  HttpServlet{
 		
 		RoomDAO dao= new RoomDAO();
 		dao.addRoom(room);
-		res.sendRedirect("addRoom");
+		res.sendRedirect("rooms");
 		
 	}
 	

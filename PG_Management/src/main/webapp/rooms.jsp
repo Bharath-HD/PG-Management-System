@@ -16,7 +16,7 @@
  Maximum Capacity
  <input type="number" name="maxCapacity" required>
  <br><br>
- <input type="submit" value="rooms">
+ <input type="submit" value="Add room">
  </form>
  
  <hr>
