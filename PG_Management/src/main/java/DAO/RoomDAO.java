@@ -51,6 +51,22 @@ public class RoomDAO {
 		}
 		return roomList;
 	}
+	public boolean deleteRoom(int roomId) {
+		
+		String sql = "delete from room where room_id=?";
+		
+		try(
+			Connection con = DBconnection.getConnection();
+			PreparedStatement pst = con.prepareStatement(sql);
+				){
+			pst.setInt(1,roomId);
+			return pst.executeUpdate()>0;
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
 }
 		
 	

@@ -11,7 +11,7 @@
 <a href="students.jsp">Manage Students</a><br>
 
 
-<a href="rooms.jsp">Add Rooms</a>
+<a href="rooms.jsp">Add Rooms</a> <br>
 
 
 <a href="rooms.jsp">Delete Rooms</a>

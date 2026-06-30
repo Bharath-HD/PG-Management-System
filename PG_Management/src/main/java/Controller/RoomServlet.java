@@ -32,6 +32,19 @@ public class RoomServlet extends  HttpServlet{
 	
 	public void doGet(HttpServletRequest req ,HttpServletResponse res) throws ServletException,IOException{
 		RoomDAO roomDAO = new RoomDAO();
+		
+		String action = req.getParameter("action");
+		
+		if("delete".equals(action)) {
+			int roomId = Integer.parseInt(req.getParameter("id"));
+			roomDAO.deleteRoom(roomId);
+			res.sendRedirect("rooms");
+			return;
+		}
+		
+		
+		
+		
 		List<Room> roomList = roomDAO.getAllRooms();
 		req.setAttribute("roomList",roomList);
 		req.getRequestDispatcher("rooms.jsp").forward(req,res);

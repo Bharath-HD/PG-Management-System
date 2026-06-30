@@ -41,7 +41,7 @@
  <td><%=room.getMaxCapacity()%></td>
  
  <td>
- <a href="RoomServlet?action=delete&id=<%=room.getRoomId()%>">Delete</a>
+ <a href="rooms?action=delete&id=<%=room.getRoomId()%>">Delete</a>
  
  </td>
  </tr>
