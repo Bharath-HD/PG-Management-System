@@ -3,7 +3,5 @@ INDEX VERSION 1.4+/Users/bharathjain/Documents/Smart_PG_Management/.metadata/.pl
 3069982232.index
 2890462083.index
 33670115.index
-875920574.index
 3870736173.index
-875920574.index
 1273301996.index

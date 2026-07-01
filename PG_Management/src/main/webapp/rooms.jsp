@@ -21,7 +21,8 @@
  
  <hr>
  <h2>Available rooms</h2>
- <table>
+ <table border="1">
+ 
  <tr>
  <th>Room Id</th>
  <th>Room Number</th>
@@ -50,6 +51,8 @@
  }
 %>
  </table>
+<h2><a href="dashboard.jsp">Back to Home</a></h2>
+ 
 </body>
 </html>
 
